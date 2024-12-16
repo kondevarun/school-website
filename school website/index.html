@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Template</title>
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+       
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f4f4f4;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+        .top-header .left-links,
+        .top-header .right-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .top-header a {
+            text-decoration: none;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        .top-header a:hover {
+            color: #007bff;
+        }
+
+        
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header img {
+            width: 80px;
+            height: auto;
+        }
+
+        .header .university-name {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+        }
+
+        .header .profile-img img {
+            width: 60px;
+            border-radius: 50%;
+        }
+
+        
+      
+        
+        
+   
+
+      
+        .banner {
+            background: #555;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner h2 {
+            margin-bottom: 10px;
+        }
+
+        .banner p {
+            margin-bottom: 20px;
+        }
+
+        .banner button {
+            padding: 10px 20px;
+            background: #88c425;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+    
+        .footer-buttons {
+            display: flex;
+            justify-content: space-around;
+            background: #88c425;
+            padding: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-buttons a {
+            background: #fff;
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .footer-buttons a:hover {
+            background: #4caf50;
+            color: #fff;
+        }
+
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-buttons {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+
+.banner-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 350px; 
+}
+
+
+.banner-wrapper {
+  display: flex;
+  
+  width: 100%; 
+  animation: scrollBanner 15s infinite; 
+}
+
+
+.banner-slide {
+  width: 100%;
+  flex: 1 0 100%;
+}
+
+.banner-slide img {
+  width: 100%;
+  height: 350px; 
+  object-fit: cover;
+}
+
+
+@keyframes scrollBanner {
+  0% { transform: translateX(0); }
+  33.33% { transform: translateX(-100%); }
+  66.66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
+
+@media (max-width: 768px) {
+  .banner-container {
+    height: 200px; 
+  }
+
+  .banner-slide img {
+    height: 200px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Card Container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Individual Card */
+.card {
+    background-color: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    border-color: #5ca904;
+}
+
+/* Icon Styling */
+.icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+/* Heading Styling */
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Button Styling */
+.read-more {
+    background-color: #5ca904;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #4c8e02;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Navigation Bar Styling */
+nav {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Allows items to wrap to next line */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            position: relative; /* Needed for dropdown positioning */
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: green;
+        }
+
+        /* Dropdown Menu Styling */
+        nav ul li ul {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            z-index: 1000;
+            min-width: 150px;
+        }
+
+        nav ul li ul li {
+            width: 100%;
+        }
+
+        nav ul li:hover > ul {
+            display: block; /* Show dropdown on hover */
+        }
+
+        /* Responsive Menu for Small Screens */
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav ul li {
+                text-align: center;
+                width: 100%;
+            }
+
+            nav ul li a {
+                padding: 0.8rem;
+                border-bottom: 1px solid #222;
+            }
+
+            nav ul li ul {
+                position: relative;
+                background-color: #222;
+                top: 0;
+                text-align: center;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+   
+    <div class="top-header">
+        <div class="left-links">
+            <a href="#">🏠 Site Home</a>
+            <a href="#">✉ Mail Login</a>
+            <a href="#">📞  Contact Us</a>
+        </div>
+        <div class="right-links">
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+    </div>
+
+   
+    <div class="header">
+        <img src="school logo.jpg" alt="University Logo">
+        <div class="university-name">
+            <h6>j.t.m socity</h6>
+            j.t.mahajan english med school,nhavi marg faizpur
+            <h6>maharashtra,india</h6>
+               
+        </div>
+        <div class="profile-img">
+            <img src="" alt="">
+        </div>
+    </div>
+
+    
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">About Us</a>
+                    <ul>
+                        <li><a href="#">school</a></li>
+                        <li><a href="#">president</a></li>
+                        <li><a href="#">principle</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Sport</a>
+                    <ul>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Facility</a>
+                    <ul>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Laboratory</a></li>
+                        <li><a href="#">computer lab</a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Celebration</a>
+                    <ul>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Cultural Programs</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Topper</a></li>
+            </ul>
+        </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+       
+       <!-- <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>🔍</button>
+        </div> -->
+    </div>
+
+    
+    <!--<div class="banner">
+        <h2>Learn In Beautiful Campus</h2>
+        <p>University campus is surrounded by lush green environment with diverse flora and fauna.</p>
+        <button>KNOW MORE</button>
+    </div> -->
+
+    <div class="banner-container">
+        <div class="banner-wrapper">
+          <div class="banner-slide">
+            <img src="school img.jpeg" alt="">
+          </div>
+          <div class="banner-slide">
+            <img src="school logo.jpg" alt="">
+          </div>
+          <div class="banner-slide">
+            <img src="school img.jpeg" alt="">
+          </div>
+        </div>
+      </div>
+
+
+    
+    <div class="footer-buttons">
+        <a href="#">computer lab</a>
+        <a href="#">projector screen </a>
+        <a href="#">laptop study</a>
+        <a href="#">science lad</a>
+        <a href="#">whatsapp homework</a>
+    </div>
+
+
+
+    <section class="cards-container">
+       
+        <div class="card">
+            <div class="icon">
+               <h6>j.t.m socity</h6>
+            </div>
+            <h3>special day</h3>
+            <button class="read-more">Read More</button>
+        </div>
+     
+        <div class="card">
+            <div class="icon">
+                <h6>j.t.m socity</h6>
+            </div>
+            <h3>principle sir</h3>
+            <button class="read-more">Read More</button>
+        </div>
+       
+        <div class="card">
+            <div class="icon">
+                <h6>j.t.m socity</h6>
+            </div>
+            <h3>facilities</h3>
+            <button class="read-more">Read More</button>
+        </div>
+      
+        <div class="card">
+            <div class="icon">
+                <h6>j.t.m socity</h6>
+            </div>
+            <h3>Library</h3>
+            <button class="read-more">Read More</button>
+        </div>
+       
+        
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

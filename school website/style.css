@@ -1,0 +1,21 @@
+.header{
+
+    width: 100%; 
+    height: 20px;
+    background-color: whitesmoke ;
+    border-color:white;
+    border-width: 1px;
+    border-style: solid;
+    display:inline-block;   
+    
+
+
+
+}
+.body{
+    margin-top: 0px;
+}
+
+
+
+
